@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyntaxErrorist.API", "SyntaxErrorist.API\SyntaxErrorist.API.csproj", "{536C1891-FACE-43C8-9B7B-A347971F1275}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{9EE6AFCA-E866-4AE8-ABEC-2D62B327C462}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{52176855-5E15-4D0D-80F3-CFDCDCF6A22F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{24BFC54C-FEC5-47A3-84EC-2422C6A365E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyntaxErrorist.Core", "SyntaxErrorist.Core\SyntaxErrorist.Core.csproj", "{3E481024-BB5C-4267-B3EC-27A2CD5F19D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyntaxErrorist.Services", "SyntaxErrorist.Services\SyntaxErrorist.Services.csproj", "{ACCBD03C-B709-4097-9855-659EAA230AD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyntaxErrorist.Infrastructure", "SyntaxErrorist.Infrastructure\SyntaxErrorist.Infrastructure.csproj", "{F3ECAFC8-6DF9-412C-BD8B-9F85CF4E4E04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyntaxErrorist.Shared", "SyntaxErrorist.Shared\SyntaxErrorist.Shared.csproj", "{ACF9A09B-590B-49AB-949E-028EAD33A644}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{536C1891-FACE-43C8-9B7B-A347971F1275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{536C1891-FACE-43C8-9B7B-A347971F1275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{536C1891-FACE-43C8-9B7B-A347971F1275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{536C1891-FACE-43C8-9B7B-A347971F1275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E481024-BB5C-4267-B3EC-27A2CD5F19D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E481024-BB5C-4267-B3EC-27A2CD5F19D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E481024-BB5C-4267-B3EC-27A2CD5F19D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E481024-BB5C-4267-B3EC-27A2CD5F19D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACCBD03C-B709-4097-9855-659EAA230AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACCBD03C-B709-4097-9855-659EAA230AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACCBD03C-B709-4097-9855-659EAA230AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACCBD03C-B709-4097-9855-659EAA230AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3ECAFC8-6DF9-412C-BD8B-9F85CF4E4E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3ECAFC8-6DF9-412C-BD8B-9F85CF4E4E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3ECAFC8-6DF9-412C-BD8B-9F85CF4E4E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3ECAFC8-6DF9-412C-BD8B-9F85CF4E4E04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF9A09B-590B-49AB-949E-028EAD33A644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF9A09B-590B-49AB-949E-028EAD33A644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF9A09B-590B-49AB-949E-028EAD33A644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF9A09B-590B-49AB-949E-028EAD33A644}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{536C1891-FACE-43C8-9B7B-A347971F1275} = {9EE6AFCA-E866-4AE8-ABEC-2D62B327C462}
+		{3E481024-BB5C-4267-B3EC-27A2CD5F19D4} = {52176855-5E15-4D0D-80F3-CFDCDCF6A22F}
+		{ACCBD03C-B709-4097-9855-659EAA230AD7} = {52176855-5E15-4D0D-80F3-CFDCDCF6A22F}
+		{F3ECAFC8-6DF9-412C-BD8B-9F85CF4E4E04} = {24BFC54C-FEC5-47A3-84EC-2422C6A365E4}
+		{ACF9A09B-590B-49AB-949E-028EAD33A644} = {24BFC54C-FEC5-47A3-84EC-2422C6A365E4}
+	EndGlobalSection
+EndGlobal
