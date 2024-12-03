@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using SyntaxErrorist.Infrastructure.Context;
+using SyntaxErrorist.Shared.Models;
 
 namespace SyntaxErrorist.Presentation.API
 {
@@ -7,15 +11,19 @@ namespace SyntaxErrorist.Presentation.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
 
             builder.Services.AddControllers();
-            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+
+            ConfigureServices(builder.Services, builder.Configuration);
+
+
+
+
+
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
@@ -29,6 +37,36 @@ namespace SyntaxErrorist.Presentation.API
             app.MapControllers();
 
             app.Run();
+        }
+
+        static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddControllers();
+
+            services.AddControllers()
+                .AddControllersAsServices();
+
+            services.AddEndpointsApiExplorer();
+            //ConfigureSwagger(services);
+            ConfigureIdentity(services);
+            //ConfigureJwtAuthentication(services, configuration);
+            ConfigureDatabase(services, configuration);
+            //RegisterApplicationServices(services);
+        }
+
+        static void ConfigureDatabase(IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
+                    b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+        }
+
+        static void ConfigureIdentity(IServiceCollection services)
+        {
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
         }
     }
 }
