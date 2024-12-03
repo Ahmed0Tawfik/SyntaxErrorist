@@ -9,12 +9,15 @@ namespace SyntaxErrorist.Infrastructure.Config
         public void Configure(EntityTypeBuilder<FriendRequest> builder)
         {
             builder.HasKey(fr => fr.Id);
+
             builder.HasOne(fr => fr.SenderProfile)
-                .WithMany(up => up.FriendRequests)
+                .WithMany(up => up.FriendRequestsSent)
                 .HasForeignKey(fr => fr.SenderId);
+
             builder.HasOne(fr => fr.ReceiverProfile)
-                .WithMany(up => up.FriendRequests)
-                .HasForeignKey(fr => fr.ReceiverId);
+                .WithMany(up => up.FriendRequestsReceived)
+                .HasForeignKey(fr => fr.ReceiverId)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

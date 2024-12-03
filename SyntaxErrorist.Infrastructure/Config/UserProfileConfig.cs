@@ -29,7 +29,7 @@ namespace SyntaxErrorist.Infrastructure.Config
 
                 builder.HasMany(up => up.FriendsList);
 
-                builder.HasMany(up => up.FriendRequests);
+              
             });
 
 

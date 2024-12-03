@@ -14,7 +14,8 @@ namespace SyntaxErrorist.Shared.Models
         public ApplicationUser IdentityUser { get; set; }
         public virtual ICollection<Playlist> Playlists { get; set; } = new List<Playlist>();
         public virtual ICollection<UserProfile> FriendsList { get; set; } = new List<UserProfile>();
-        public virtual ICollection<FriendRequest> FriendRequests { get; set; } = new List<FriendRequest>();
+        public virtual ICollection<FriendRequest> FriendRequestsSent { get; set; } = new List<FriendRequest>();
+        public virtual ICollection<FriendRequest> FriendRequestsReceived { get; set; } = new List<FriendRequest>();
 
     }
 }

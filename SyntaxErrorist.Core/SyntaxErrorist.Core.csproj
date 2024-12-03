@@ -7,10 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="MediatRHandlers\Interfaces\" />
     <Folder Include="MediatRHandlers\Commands\" />
-    <Folder Include="Handlers\" />
-    <Folder Include="MediatRHandlers\" />
+    <Folder Include="MediatRHandlers\Handlers\" />
     <Folder Include="MediatRHandlers\Queries\" />
   </ItemGroup>
 
