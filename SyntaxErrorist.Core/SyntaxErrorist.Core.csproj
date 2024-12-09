@@ -7,9 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="MediatRHandlers\Commands\" />
-    <Folder Include="MediatRHandlers\Handlers\" />
-    <Folder Include="MediatRHandlers\Queries\" />
+    <ProjectReference Include="..\SyntaxErrorist.Shared\SyntaxErrorist.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MediatRHandlers\Playlist\" />
+    <Folder Include="MediatRHandlers\EmailSender\" />
+    <Folder Include="MediatRHandlers\FriendRequest\" />
+    <Folder Include="MediatRHandlers\UserProfile\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
   </ItemGroup>
 
 </Project>

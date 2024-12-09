@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using SyntaxErrorist.Infrastructure.Context;
 using SyntaxErrorist.Shared.Models;
+using SyntaxErrorist.Services.Services;
+using SyntaxErrorist.Core.IService;
 
 namespace SyntaxErrorist.Presentation.API
 {
@@ -52,6 +54,11 @@ namespace SyntaxErrorist.Presentation.API
             //ConfigureJwtAuthentication(services, configuration);
             ConfigureDatabase(services, configuration);
             //RegisterApplicationServices(services);
+
+            services.AddTransient<IAuthService, AuthService>();
+            services.AddTransient<ITokenService, TokenService>();
+            services.AddTransient<IEmailSenderService, EmailSenderService>();
+
         }
 
         static void ConfigureDatabase(IServiceCollection services, IConfiguration configuration)

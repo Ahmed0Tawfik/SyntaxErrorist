@@ -24,10 +24,10 @@ namespace SyntaxErrorist.Shared.Models
 
         [Required]
         [StringLength(255)]
-        public string Bio { get; set; } = string.Empty;
+        public string? Bio { get; set; } = string.Empty;
 
         [Required]
         [StringLength(256)]
-        public string ProfilePictureUrl { get; set; } = string.Empty;
+        public string? ProfilePictureUrl { get; set; } = string.Empty;
     }
 }
